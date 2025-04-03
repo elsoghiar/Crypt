@@ -14,6 +14,7 @@
   /* Right-to-left support for Arabic language */
   html[dir="rtl"] {
     text-align: right;
+    font-family: Tahoma, Arial, sans-serif;
   }
 
   html[dir="rtl"] .reverse-for-rtl {
@@ -22,6 +23,17 @@
 
   html[dir="rtl"] .mirror-for-rtl {
     transform: scaleX(-1);
+  }
+  
+  html[dir="rtl"] input, 
+  html[dir="rtl"] textarea {
+    text-align: right;
+  }
+  
+  /* Improve Arabic font rendering */
+  html[dir="rtl"] * {
+    letter-spacing: 0;
+    word-spacing: 1px;
   }
 
   :root {

@@ -65,9 +65,9 @@ function App() {
           {/* Main container with tabs */}
           <div className="w-full bg-secondary rounded-lg p-6 neu-card">
             <Tabs defaultValue="encrypt" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6">
-                <TabsTrigger value="encrypt">{t("header.encrypt")}</TabsTrigger>
-                <TabsTrigger value="decrypt">{t("header.decrypt")}</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 mb-6 reverse-for-rtl">
+                <TabsTrigger value="encrypt" className="rounded-md py-2 font-medium text-sm">{t("header.encrypt")}</TabsTrigger>
+                <TabsTrigger value="decrypt" className="rounded-md py-2 font-medium text-sm">{t("header.decrypt")}</TabsTrigger>
               </TabsList>
               <TabsContent value="encrypt" className="mt-0">
                 <EncryptionPanel 

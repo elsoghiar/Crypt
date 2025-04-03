@@ -89,7 +89,7 @@ const EncryptionPanel = ({ onEncrypt, showNotification }: EncryptionPanelProps) 
         
         {/* Input method tabs */}
         <Tabs defaultValue="text" value={inputMode} onValueChange={setInputMode} className="mb-6">
-          <TabsList className="border-b border-accent bg-transparent w-full justify-start space-x-4 rounded-none p-0">
+          <TabsList className="border-b border-accent bg-transparent w-full justify-start space-x-4 rtl:space-x-reverse rounded-none p-0">
             <TabsTrigger 
               value="text" 
               className={`py-2 px-4 font-medium data-[state=active]:tab-active data-[state=active]:shadow-none bg-transparent`}
@@ -162,13 +162,13 @@ const EncryptionPanel = ({ onEncrypt, showNotification }: EncryptionPanelProps) 
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={handlePasswordChange}
-                  className="w-full neu-input pr-10"
+                  className="w-full neu-input pr-10 rtl:pr-4 rtl:pl-10"
                   placeholder={t("encrypt.passwordPlaceholder")}
                 />
                 <Button 
                   variant="ghost"
                   size="icon"
-                  className="absolute inset-y-0 right-0 px-3"
+                  className="absolute inset-y-0 right-0 rtl:right-auto rtl:left-0 px-3"
                   onClick={togglePasswordVisibility}
                 >
                   {showPassword ? <EyeOff className="h-4 w-4 text-gray-400 hover:text-white" /> : <Eye className="h-4 w-4 text-gray-400 hover:text-white" />}
@@ -202,9 +202,9 @@ const EncryptionPanel = ({ onEncrypt, showNotification }: EncryptionPanelProps) 
             onClick={handleEncrypt}
             className="bg-accent hover:bg-highlight custom-transition rounded-lg py-3 px-6 font-medium neu-card"
           >
-            <Lock className="mr-2 h-4 w-4" /> {t("encrypt.button")}
+            <Lock className="mx-2 h-4 w-4 rtl:order-1" /> {t("encrypt.button")}
           </Button>
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 rtl:space-x-reverse">
             <Button 
               variant="ghost"
               onClick={handleClearInput}
