@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 12%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 17%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 17%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 17%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 17%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 21%;
+    --radius: 0.5rem;
+  }
+  
+  /* Custom Shadcn styles overrides for the dark mode theme */
+  .neu-input {
+    @apply bg-secondary shadow-[inset_2px_2px_5px_rgba(0,0,0,0.5),_inset_-2px_-2px_5px_rgba(255,255,255,0.05)] rounded-lg text-white outline-none;
+  }
+  
+  .neu-card {
+    @apply bg-secondary shadow-[5px_5px_10px_rgba(0,0,0,0.5),_-5px_-5px_10px_rgba(255,255,255,0.05)] rounded-xl;
+  }
+  
+  .tab-active {
+    @apply border-b-2 border-white;
+  }
+  
+  .custom-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

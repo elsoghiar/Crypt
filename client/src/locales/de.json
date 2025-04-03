@@ -1,0 +1,71 @@
+{
+  "header": {
+    "tagline": "Moderne Textverschlüsselung",
+    "toggleDarkMode": "Dunkelmodus umschalten"
+  },
+  "encrypt": {
+    "title": "Verschlüsseln",
+    "textTab": "Text",
+    "pdfTab": "PDF",
+    "inputLabel": "Eingabetext",
+    "inputPlaceholder": "Text zum Verschlüsseln eingeben...",
+    "pdfLabel": "PDF-Datei hochladen",
+    "pdfLoading": "Text aus PDF extrahieren...",
+    "extractedTextPlaceholder": "Aus PDF extrahierter Text",
+    "optionsTitle": "Verschlüsselungsoptionen",
+    "passwordProtection": "Passwortschutz",
+    "passwordPlaceholder": "Verschlüsselungspasswort eingeben",
+    "passwordNote": "Starkes Passwort empfohlen. Kann nicht wiederhergestellt werden, wenn es verloren geht.",
+    "algorithm": "Algorithmus",
+    "algorithmPlaceholder": "Algorithmus auswählen",
+    "button": "Verschlüsseln",
+    "clearTooltip": "Eingabe löschen",
+    "helpTooltip": "Hilfe",
+    "cleared": "Eingabe gelöscht",
+    "helpMessage": "Geben Sie Text zum Verschlüsseln ein, optional mit einem Passwort schützen. PDF-Dateien können ebenfalls verschlüsselt werden.",
+    "pdfExtracted": "Text erfolgreich aus PDF extrahiert",
+    "pdfError": "Fehler beim Extrahieren von Text aus PDF",
+    "noInputError": "Bitte geben Sie Text zum Verschlüsseln ein",
+    "success": "Text erfolgreich verschlüsselt!",
+    "error": "Fehler beim Verschlüsseln des Textes"
+  },
+  "decrypt": {
+    "title": "Entschlüsseln",
+    "textTab": "Text",
+    "fileTab": "Datei",
+    "inputLabel": "Verschlüsselter Text",
+    "inputPlaceholder": "Verschlüsselten Text zum Entschlüsseln eingeben...",
+    "fileLabel": "Verschlüsselte Datei hochladen",
+    "fileContentPlaceholder": "Dateiinhalt wird hier angezeigt",
+    "passwordLabel": "Passwort (falls erforderlich)",
+    "passwordPlaceholder": "Entschlüsselungspasswort eingeben",
+    "button": "Entschlüsseln",
+    "copyTooltip": "In die Zwischenablage kopieren",
+    "downloadTooltip": "Als Datei herunterladen",
+    "fileReadError": "Fehler beim Lesen der Datei",
+    "noInputError": "Bitte geben Sie verschlüsselten Text zum Entschlüsseln ein",
+    "passwordError": "Falsches Passwort oder ungültiger verschlüsselter Text",
+    "success": "Text erfolgreich entschlüsselt!",
+    "error": "Fehler beim Entschlüsseln des Textes. Überprüfen Sie Ihr Passwort und versuchen Sie es erneut.",
+    "nothingToCopy": "Nichts zu kopieren",
+    "nothingToDownload": "Nichts herunterzuladen"
+  },
+  "output": {
+    "title": "Ausgabe",
+    "encrypted": "Verschlüsselt",
+    "decrypted": "Entschlüsselt",
+    "copy": "Kopieren",
+    "download": "Herunterladen"
+  },
+  "common": {
+    "copied": "In die Zwischenablage kopiert!",
+    "copyFailed": "Fehler beim Kopieren in die Zwischenablage",
+    "downloaded": "Erfolgreich heruntergeladen"
+  },
+  "footer": {
+    "disclaimer": "Crypt — Sichere clientseitige Verschlüsselung. Ihre Daten verlassen niemals Ihr Gerät.",
+    "security": "Sicherheit",
+    "api": "API",
+    "help": "Hilfe"
+  }
+}

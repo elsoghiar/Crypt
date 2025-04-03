@@ -1,0 +1,71 @@
+{
+  "header": {
+    "tagline": "Cryptage de Texte Moderne",
+    "toggleDarkMode": "Basculer Mode Sombre"
+  },
+  "encrypt": {
+    "title": "Crypter",
+    "textTab": "Texte",
+    "pdfTab": "PDF",
+    "inputLabel": "Texte d'Entrée",
+    "inputPlaceholder": "Entrez le texte à crypter...",
+    "pdfLabel": "Téléverser un Fichier PDF",
+    "pdfLoading": "Extraction du texte du PDF...",
+    "extractedTextPlaceholder": "Texte extrait du PDF",
+    "optionsTitle": "Options de Cryptage",
+    "passwordProtection": "Protection par Mot de Passe",
+    "passwordPlaceholder": "Entrez le mot de passe de cryptage",
+    "passwordNote": "Mot de passe fort recommandé. Ne peut pas être récupéré s'il est perdu.",
+    "algorithm": "Algorithme",
+    "algorithmPlaceholder": "Sélectionner un Algorithme",
+    "button": "Crypter",
+    "clearTooltip": "Effacer l'Entrée",
+    "helpTooltip": "Aide",
+    "cleared": "Entrée effacée",
+    "helpMessage": "Entrez du texte à crypter, protégez-le avec un mot de passe si nécessaire. Les fichiers PDF peuvent également être cryptés.",
+    "pdfExtracted": "Texte extrait du PDF avec succès",
+    "pdfError": "Échec de l'extraction du texte du PDF",
+    "noInputError": "Veuillez entrer du texte à crypter",
+    "success": "Texte crypté avec succès !",
+    "error": "Échec du cryptage du texte"
+  },
+  "decrypt": {
+    "title": "Décrypter",
+    "textTab": "Texte",
+    "fileTab": "Fichier",
+    "inputLabel": "Texte Crypté",
+    "inputPlaceholder": "Entrez le texte crypté à décrypter...",
+    "fileLabel": "Téléverser un Fichier Crypté",
+    "fileContentPlaceholder": "Le contenu du fichier apparaîtra ici",
+    "passwordLabel": "Mot de Passe (si nécessaire)",
+    "passwordPlaceholder": "Entrez le mot de passe de décryptage",
+    "button": "Décrypter",
+    "copyTooltip": "Copier dans le Presse-papiers",
+    "downloadTooltip": "Télécharger comme Fichier",
+    "fileReadError": "Échec de la lecture du fichier",
+    "noInputError": "Veuillez entrer du texte crypté à décrypter",
+    "passwordError": "Mot de passe incorrect ou texte crypté invalide",
+    "success": "Texte décrypté avec succès !",
+    "error": "Échec du décryptage du texte. Vérifiez votre mot de passe et réessayez.",
+    "nothingToCopy": "Rien à copier",
+    "nothingToDownload": "Rien à télécharger"
+  },
+  "output": {
+    "title": "Sortie",
+    "encrypted": "Crypté",
+    "decrypted": "Décrypté",
+    "copy": "Copier",
+    "download": "Télécharger"
+  },
+  "common": {
+    "copied": "Copié dans le presse-papiers !",
+    "copyFailed": "Échec de la copie dans le presse-papiers",
+    "downloaded": "Téléchargé avec succès"
+  },
+  "footer": {
+    "disclaimer": "Crypt — Cryptage sécurisé côté client. Vos données ne quittent jamais votre appareil.",
+    "security": "Sécurité",
+    "api": "API",
+    "help": "Aide"
+  }
+}

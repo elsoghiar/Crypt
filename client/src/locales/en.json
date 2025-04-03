@@ -1,0 +1,71 @@
+{
+  "header": {
+    "tagline": "Modern Text Encryption",
+    "toggleDarkMode": "Toggle Dark Mode"
+  },
+  "encrypt": {
+    "title": "Encrypt",
+    "textTab": "Text",
+    "pdfTab": "PDF",
+    "inputLabel": "Input Text",
+    "inputPlaceholder": "Enter text to encrypt...",
+    "pdfLabel": "Upload PDF File",
+    "pdfLoading": "Extracting text from PDF...",
+    "extractedTextPlaceholder": "Extracted text from PDF",
+    "optionsTitle": "Encryption Options",
+    "passwordProtection": "Password Protection",
+    "passwordPlaceholder": "Enter encryption password",
+    "passwordNote": "Strong password recommended. Cannot be recovered if lost.",
+    "algorithm": "Algorithm",
+    "algorithmPlaceholder": "Select Algorithm",
+    "button": "Encrypt",
+    "clearTooltip": "Clear Input",
+    "helpTooltip": "Help",
+    "cleared": "Input cleared",
+    "helpMessage": "Enter text to encrypt, optionally protect with a password. PDF files can also be encrypted.",
+    "pdfExtracted": "Text extracted from PDF successfully",
+    "pdfError": "Failed to extract text from PDF",
+    "noInputError": "Please enter text to encrypt",
+    "success": "Text successfully encrypted!",
+    "error": "Failed to encrypt text"
+  },
+  "decrypt": {
+    "title": "Decrypt",
+    "textTab": "Text",
+    "fileTab": "File",
+    "inputLabel": "Encrypted Text",
+    "inputPlaceholder": "Enter encrypted text to decrypt...",
+    "fileLabel": "Upload Encrypted File",
+    "fileContentPlaceholder": "File content will appear here",
+    "passwordLabel": "Password (if required)",
+    "passwordPlaceholder": "Enter decryption password",
+    "button": "Decrypt",
+    "copyTooltip": "Copy to Clipboard",
+    "downloadTooltip": "Download as File",
+    "fileReadError": "Failed to read file",
+    "noInputError": "Please enter encrypted text to decrypt",
+    "passwordError": "Incorrect password or invalid encrypted text",
+    "success": "Text successfully decrypted!",
+    "error": "Failed to decrypt text. Check your password and try again.",
+    "nothingToCopy": "Nothing to copy",
+    "nothingToDownload": "Nothing to download"
+  },
+  "output": {
+    "title": "Output",
+    "encrypted": "Encrypted",
+    "decrypted": "Decrypted",
+    "copy": "Copy",
+    "download": "Download"
+  },
+  "common": {
+    "copied": "Copied to clipboard!",
+    "copyFailed": "Failed to copy to clipboard",
+    "downloaded": "Downloaded successfully"
+  },
+  "footer": {
+    "disclaimer": "Crypt — Secure client-side encryption. Your data never leaves your device.",
+    "security": "Security",
+    "api": "API",
+    "help": "Help"
+  }
+}

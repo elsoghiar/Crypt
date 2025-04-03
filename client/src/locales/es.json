@@ -1,0 +1,71 @@
+{
+  "header": {
+    "tagline": "Encriptación de Texto Moderna",
+    "toggleDarkMode": "Alternar Modo Oscuro"
+  },
+  "encrypt": {
+    "title": "Encriptar",
+    "textTab": "Texto",
+    "pdfTab": "PDF",
+    "inputLabel": "Texto de Entrada",
+    "inputPlaceholder": "Ingrese texto para encriptar...",
+    "pdfLabel": "Subir Archivo PDF",
+    "pdfLoading": "Extrayendo texto del PDF...",
+    "extractedTextPlaceholder": "Texto extraído del PDF",
+    "optionsTitle": "Opciones de Encriptación",
+    "passwordProtection": "Protección con Contraseña",
+    "passwordPlaceholder": "Ingrese contraseña de encriptación",
+    "passwordNote": "Se recomienda una contraseña fuerte. No se puede recuperar si se pierde.",
+    "algorithm": "Algoritmo",
+    "algorithmPlaceholder": "Seleccionar Algoritmo",
+    "button": "Encriptar",
+    "clearTooltip": "Limpiar Entrada",
+    "helpTooltip": "Ayuda",
+    "cleared": "Entrada limpiada",
+    "helpMessage": "Ingrese texto para encriptar, opcionalmente protegido con contraseña. Los archivos PDF también pueden ser encriptados.",
+    "pdfExtracted": "Texto extraído del PDF con éxito",
+    "pdfError": "Error al extraer texto del PDF",
+    "noInputError": "Por favor ingrese texto para encriptar",
+    "success": "¡Texto encriptado con éxito!",
+    "error": "Error al encriptar el texto"
+  },
+  "decrypt": {
+    "title": "Desencriptar",
+    "textTab": "Texto",
+    "fileTab": "Archivo",
+    "inputLabel": "Texto Encriptado",
+    "inputPlaceholder": "Ingrese texto encriptado para desencriptar...",
+    "fileLabel": "Subir Archivo Encriptado",
+    "fileContentPlaceholder": "El contenido del archivo aparecerá aquí",
+    "passwordLabel": "Contraseña (si es necesaria)",
+    "passwordPlaceholder": "Ingrese contraseña de desencriptación",
+    "button": "Desencriptar",
+    "copyTooltip": "Copiar al Portapapeles",
+    "downloadTooltip": "Descargar como Archivo",
+    "fileReadError": "Error al leer el archivo",
+    "noInputError": "Por favor ingrese texto encriptado para desencriptar",
+    "passwordError": "Contraseña incorrecta o texto encriptado inválido",
+    "success": "¡Texto desencriptado con éxito!",
+    "error": "Error al desencriptar el texto. Verifique su contraseña e intente nuevamente.",
+    "nothingToCopy": "Nada para copiar",
+    "nothingToDownload": "Nada para descargar"
+  },
+  "output": {
+    "title": "Salida",
+    "encrypted": "Encriptado",
+    "decrypted": "Desencriptado",
+    "copy": "Copiar",
+    "download": "Descargar"
+  },
+  "common": {
+    "copied": "¡Copiado al portapapeles!",
+    "copyFailed": "Error al copiar al portapapeles",
+    "downloaded": "Descargado con éxito"
+  },
+  "footer": {
+    "disclaimer": "Crypt — Encriptación segura del lado del cliente. Sus datos nunca salen de su dispositivo.",
+    "security": "Seguridad",
+    "api": "API",
+    "help": "Ayuda"
+  }
+}

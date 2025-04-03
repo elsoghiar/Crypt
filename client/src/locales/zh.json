@@ -1,0 +1,71 @@
+{
+  "header": {
+    "tagline": "现代文本加密",
+    "toggleDarkMode": "切换暗模式"
+  },
+  "encrypt": {
+    "title": "加密",
+    "textTab": "文本",
+    "pdfTab": "PDF",
+    "inputLabel": "输入文本",
+    "inputPlaceholder": "输入要加密的文本...",
+    "pdfLabel": "上传PDF文件",
+    "pdfLoading": "正在从PDF提取文本...",
+    "extractedTextPlaceholder": "从PDF提取的文本",
+    "optionsTitle": "加密选项",
+    "passwordProtection": "密码保护",
+    "passwordPlaceholder": "输入加密密码",
+    "passwordNote": "推荐使用强密码。如果丢失将无法恢复。",
+    "algorithm": "算法",
+    "algorithmPlaceholder": "选择算法",
+    "button": "加密",
+    "clearTooltip": "清除输入",
+    "helpTooltip": "帮助",
+    "cleared": "输入已清除",
+    "helpMessage": "输入要加密的文本，可选择使用密码保护。PDF文件也可以被加密。",
+    "pdfExtracted": "成功从PDF提取文本",
+    "pdfError": "从PDF提取文本失败",
+    "noInputError": "请输入要加密的文本",
+    "success": "文本已成功加密！",
+    "error": "加密文本失败"
+  },
+  "decrypt": {
+    "title": "解密",
+    "textTab": "文本",
+    "fileTab": "文件",
+    "inputLabel": "加密文本",
+    "inputPlaceholder": "输入要解密的加密文本...",
+    "fileLabel": "上传加密文件",
+    "fileContentPlaceholder": "文件内容将显示在此处",
+    "passwordLabel": "密码（如果需要）",
+    "passwordPlaceholder": "输入解密密码",
+    "button": "解密",
+    "copyTooltip": "复制到剪贴板",
+    "downloadTooltip": "下载为文件",
+    "fileReadError": "读取文件失败",
+    "noInputError": "请输入要解密的加密文本",
+    "passwordError": "密码不正确或加密文本无效",
+    "success": "文本已成功解密！",
+    "error": "解密文本失败。请检查您的密码并重试。",
+    "nothingToCopy": "没有可复制的内容",
+    "nothingToDownload": "没有可下载的内容"
+  },
+  "output": {
+    "title": "输出",
+    "encrypted": "已加密",
+    "decrypted": "已解密",
+    "copy": "复制",
+    "download": "下载"
+  },
+  "common": {
+    "copied": "已复制到剪贴板！",
+    "copyFailed": "复制到剪贴板失败",
+    "downloaded": "下载成功"
+  },
+  "footer": {
+    "disclaimer": "Crypt — 安全的客户端加密。您的数据永远不会离开您的设备。",
+    "security": "安全",
+    "api": "API",
+    "help": "帮助"
+  }
+}
