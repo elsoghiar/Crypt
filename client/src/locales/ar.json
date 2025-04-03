@@ -1,0 +1,73 @@
+{
+  "header": {
+    "tagline": "تشفير النصوص الحديث",
+    "toggleDarkMode": "تبديل الوضع المظلم",
+    "encrypt": "تشفير",
+    "decrypt": "فك التشفير"
+  },
+  "encrypt": {
+    "title": "تشفير",
+    "textTab": "نص",
+    "pdfTab": "PDF",
+    "inputLabel": "النص المدخل",
+    "inputPlaceholder": "أدخل النص للتشفير...",
+    "pdfLabel": "تحميل ملف PDF",
+    "pdfLoading": "جاري استخراج النص من ملف PDF...",
+    "extractedTextPlaceholder": "النص المستخرج من PDF",
+    "optionsTitle": "خيارات التشفير",
+    "passwordProtection": "حماية بكلمة مرور",
+    "passwordPlaceholder": "أدخل كلمة مرور التشفير",
+    "passwordNote": "يُنصح باستخدام كلمة مرور قوية. لا يمكن استردادها في حالة فقدانها.",
+    "algorithm": "الخوارزمية",
+    "algorithmPlaceholder": "اختر خوارزمية",
+    "button": "تشفير",
+    "clearTooltip": "مسح الإدخال",
+    "helpTooltip": "مساعدة",
+    "cleared": "تم مسح الإدخال",
+    "helpMessage": "أدخل النص للتشفير، ويمكنك حمايته بكلمة مرور. يمكن أيضًا تشفير ملفات PDF.",
+    "pdfExtracted": "تم استخراج النص من PDF بنجاح",
+    "pdfError": "فشل في استخراج النص من PDF",
+    "noInputError": "الرجاء إدخال نص للتشفير",
+    "success": "تم تشفير النص بنجاح!",
+    "error": "فشل في تشفير النص"
+  },
+  "decrypt": {
+    "title": "فك التشفير",
+    "textTab": "نص",
+    "fileTab": "ملف",
+    "inputLabel": "النص المشفر",
+    "inputPlaceholder": "أدخل النص المشفر لفك تشفيره...",
+    "fileLabel": "تحميل ملف مشفر",
+    "fileContentPlaceholder": "سيظهر محتوى الملف هنا",
+    "passwordLabel": "كلمة المرور (إذا كانت مطلوبة)",
+    "passwordPlaceholder": "أدخل كلمة مرور فك التشفير",
+    "button": "فك التشفير",
+    "copyTooltip": "نسخ إلى الحافظة",
+    "downloadTooltip": "تنزيل كملف",
+    "fileReadError": "فشل في قراءة الملف",
+    "noInputError": "الرجاء إدخال نص مشفر لفك التشفير",
+    "passwordError": "كلمة مرور غير صحيحة أو نص مشفر غير صالح",
+    "success": "تم فك تشفير النص بنجاح!",
+    "error": "فشل في فك تشفير النص. تحقق من كلمة المرور وحاول مرة أخرى.",
+    "nothingToCopy": "لا يوجد شيء للنسخ",
+    "nothingToDownload": "لا يوجد شيء للتنزيل"
+  },
+  "output": {
+    "title": "المخرجات",
+    "encrypted": "مشفر",
+    "decrypted": "تم فك تشفيره",
+    "copy": "نسخ",
+    "download": "تنزيل"
+  },
+  "common": {
+    "copied": "تم النسخ إلى الحافظة!",
+    "copyFailed": "فشل النسخ إلى الحافظة",
+    "downloaded": "تم التنزيل بنجاح"
+  },
+  "footer": {
+    "disclaimer": "كريبت — تشفير آمن على جانب العميل. بياناتك لا تغادر جهازك أبدًا.",
+    "security": "الأمان",
+    "api": "واجهة برمجة التطبيقات",
+    "help": "مساعدة"
+  }
+}

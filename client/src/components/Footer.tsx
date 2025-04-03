@@ -13,15 +13,15 @@ const Footer = () => {
           </p>
         </div>
         
-        <div className="flex space-x-6">
-          <a href="#" className="text-gray-400 hover:text-white transition-all">
-            <Shield className="h-4 w-4 inline mr-1" /> {t("footer.security")}
+        <div className="flex space-x-6 rtl:space-x-reverse">
+          <a href="#" className="text-gray-400 hover:text-white custom-transition">
+            <Shield className="h-4 w-4 inline mx-1 rtl:mirror-for-rtl" /> {t("footer.security")}
           </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-all">
-            <Code className="h-4 w-4 inline mr-1" /> {t("footer.api")}
+          <a href="#" className="text-gray-400 hover:text-white custom-transition">
+            <Code className="h-4 w-4 inline mx-1 rtl:mirror-for-rtl" /> {t("footer.api")}
           </a>
-          <a href="#" className="text-gray-400 hover:text-white transition-all">
-            <HelpCircle className="h-4 w-4 inline mr-1" /> {t("footer.help")}
+          <a href="#" className="text-gray-400 hover:text-white custom-transition">
+            <HelpCircle className="h-4 w-4 inline mx-1 rtl:mirror-for-rtl" /> {t("footer.help")}
           </a>
         </div>
       </div>

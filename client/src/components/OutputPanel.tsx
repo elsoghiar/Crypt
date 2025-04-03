@@ -30,7 +30,7 @@ const OutputPanel = ({ content, type, showNotification }: OutputPanelProps) => {
 
   return (
     <div className="mt-8 neu-card p-6">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 reverse-for-rtl">
         <h2 className="text-xl font-semibold">{t("output.title")}</h2>
         <Badge 
           variant={type === "encrypted" ? "default" : "secondary"}
@@ -44,20 +44,20 @@ const OutputPanel = ({ content, type, showNotification }: OutputPanelProps) => {
         {content}
       </div>
       
-      <div className="flex justify-end space-x-3">
+      <div className="flex justify-end space-x-3 rtl:space-x-reverse">
         <Button
           variant="secondary"
           onClick={handleCopy}
           className="bg-highlight hover:bg-accent custom-transition rounded-lg py-2 px-4 neu-card"
         >
-          <Copy className="mr-2 h-4 w-4" /> {t("output.copy")}
+          <Copy className="mx-2 h-4 w-4 rtl:mirror-for-rtl" /> {t("output.copy")}
         </Button>
         <Button
           variant="secondary"
           onClick={handleDownload}
           className="bg-highlight hover:bg-accent custom-transition rounded-lg py-2 px-4 neu-card"
         >
-          <Download className="mr-2 h-4 w-4" /> {t("output.download")}
+          <Download className="mx-2 h-4 w-4 rtl:mirror-for-rtl" /> {t("output.download")}
         </Button>
       </div>
     </div>

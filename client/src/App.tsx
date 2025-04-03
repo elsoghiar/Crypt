@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./components/Header";
 import EncryptionPanel from "./components/EncryptionPanel";
@@ -13,7 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 type OutputType = "encrypted" | "decrypted" | null;
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   // State for notification system
   const [notification, setNotification] = useState<{
@@ -29,6 +29,12 @@ function App() {
   // State for output display
   const [outputContent, setOutputContent] = useState<string>("");
   const [outputType, setOutputType] = useState<OutputType>(null);
+  
+  // Set HTML direction based on language
+  useEffect(() => {
+    const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('dir', dir);
+  }, [i18n.language]);
   
   // Show notification function
   const showNotification = (message: string, type: "success" | "danger") => {

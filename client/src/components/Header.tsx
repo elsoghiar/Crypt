@@ -16,17 +16,17 @@ const Header = () => {
 
   return (
     <header className="py-6 px-6 md:px-12 flex justify-between items-center border-b border-accent">
-      <div className="flex items-center">
-        <div className="text-2xl font-bold mr-2">Crypt</div>
+      <div className="flex items-center reverse-for-rtl">
+        <div className="text-2xl font-bold mx-2">Crypt</div>
         <div className="text-sm text-gray-400">{t("header.tagline")}</div>
       </div>
       
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 rtl:space-x-reverse">
         <LanguageSelector />
         
         <Button
           variant="outline"
-          className="bg-secondary hover:bg-accent transition-all p-2 rounded-md neu-card"
+          className="bg-secondary hover:bg-accent custom-transition p-2 rounded-md neu-card"
           onClick={toggleDarkMode}
           aria-label={t("header.toggleDarkMode")}
         >

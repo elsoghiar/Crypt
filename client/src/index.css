@@ -11,6 +11,19 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 
+  /* Right-to-left support for Arabic language */
+  html[dir="rtl"] {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .reverse-for-rtl {
+    flex-direction: row-reverse;
+  }
+
+  html[dir="rtl"] .mirror-for-rtl {
+    transform: scaleX(-1);
+  }
+
   :root {
     --background: 0 0% 7%;
     --foreground: 0 0% 100%;
