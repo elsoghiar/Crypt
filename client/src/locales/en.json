@@ -1,7 +1,9 @@
 {
   "header": {
     "tagline": "Modern Text Encryption",
-    "toggleDarkMode": "Toggle Dark Mode"
+    "toggleDarkMode": "Toggle Dark Mode",
+    "encrypt": "Encrypt",
+    "decrypt": "Decrypt" 
   },
   "encrypt": {
     "title": "Encrypt",
@@ -61,6 +63,10 @@
     "copied": "Copied to clipboard!",
     "copyFailed": "Failed to copy to clipboard",
     "downloaded": "Downloaded successfully"
+  },
+  "security": {
+    "title": "Security Note",
+    "message": "All encryption happens in your browser. Your data never leaves your device."
   },
   "footer": {
     "disclaimer": "Crypt — Secure client-side encryption. Your data never leaves your device.",

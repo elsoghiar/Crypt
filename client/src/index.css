@@ -7,8 +7,12 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
   }
 
   /* Right-to-left support for Arabic language */
@@ -36,6 +40,51 @@
     word-spacing: 1px;
   }
 
+  /* Fix spacing for RTL UI */
+  html[dir="rtl"] .rtl-spacing {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+  
+  html[dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.6; }
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(54, 211, 153, 0.1); }
+    50% { box-shadow: 0 0 20px rgba(54, 211, 153, 0.2); }
+    100% { box-shadow: 0 0 5px rgba(54, 211, 153, 0.1); }
+  }
+
   :root {
     --background: 0 0% 7%;
     --foreground: 0 0% 100%;
@@ -57,6 +106,7 @@
     --input: 0 0% 12%;
     --ring: 0 0% 21%;
     --radius: 0.5rem;
+    --success: 152 55% 52%;
   }
   
   /* Custom Shadcn styles overrides for the dark mode theme */
@@ -68,11 +118,49 @@
     @apply bg-secondary shadow-[5px_5px_10px_rgba(0,0,0,0.5),_-5px_-5px_10px_rgba(255,255,255,0.05)] rounded-xl;
   }
   
+  .neu-card-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .neu-card-hover:hover {
+    @apply shadow-[6px_6px_12px_rgba(0,0,0,0.6),_-6px_-6px_12px_rgba(255,255,255,0.06)];
+  }
+  
   .tab-active {
     @apply border-b-2 border-white;
   }
   
   .custom-transition {
     @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .animate-pulse-subtle {
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .animate-float {
+    animation: float 3s infinite ease-in-out;
+  }
+  
+  .animate-glow {
+    animation: glow 3s infinite ease-in-out;
+  }
+  
+  /* Improved glassmorphism */
+  .glassmorphism {
+    @apply bg-secondary/40 backdrop-blur-md border border-white/10;
+  }
+  
+  /* Fix some RTL specific layout issues */
+  html[dir="rtl"] .select-dropdown {
+    direction: rtl;
   }
 }
