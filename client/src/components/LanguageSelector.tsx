@@ -29,17 +29,17 @@ const LanguageSelector = () => {
   return (
     <div className="relative">
       <Select value={currentLang} onValueChange={changeLanguage}>
-        <SelectTrigger className="appearance-none bg-secondary text-white py-2 px-4 rounded-md neu-input outline-none w-[140px]">
+        <SelectTrigger className="appearance-none bg-secondary text-white py-1 px-3 text-xs rounded-md neu-input outline-none w-[120px] h-8">
           <SelectValue aria-label={currentLang}>
             {languages.find(lang => lang.code === currentLang)?.name || "English"}
           </SelectValue>
         </SelectTrigger>
-        <SelectContent className="bg-secondary text-white border-accent max-h-60">
+        <SelectContent className="bg-secondary text-white border-accent max-h-48">
           {languages.map((language) => (
             <SelectItem 
               key={language.code} 
               value={language.code} 
-              className="focus:bg-accent hover:bg-accent py-2 cursor-pointer"
+              className="focus:bg-accent hover:bg-accent py-1.5 cursor-pointer text-xs"
             >
               {language.name}
             </SelectItem>
@@ -47,7 +47,7 @@ const LanguageSelector = () => {
         </SelectContent>
       </Select>
       <div className="pointer-events-none absolute inset-y-0 right-0 rtl:left-0 rtl:right-auto flex items-center px-2 text-white">
-        <ChevronDown className="h-4 w-4" />
+        <ChevronDown className="h-3 w-3" />
       </div>
     </div>
   );

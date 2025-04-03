@@ -29,35 +29,35 @@ const OutputPanel = ({ content, type, showNotification }: OutputPanelProps) => {
   };
 
   return (
-    <div className="mt-8 neu-card p-6">
-      <div className="flex justify-between items-center mb-4 reverse-for-rtl">
-        <h2 className="text-xl font-semibold">{t("output.title")}</h2>
+    <div className="neu-card p-4">
+      <div className="flex justify-between items-center mb-3 reverse-for-rtl">
+        <h2 className="text-md font-semibold">{t("output.title")}</h2>
         <Badge 
           variant={type === "encrypted" ? "default" : "secondary"}
-          className={`${type === "encrypted" ? "bg-success bg-opacity-20 text-success hover:bg-success hover:bg-opacity-30" : "bg-blue-500 bg-opacity-20 text-blue-400 hover:bg-blue-500 hover:bg-opacity-30"} px-3 py-1 rounded-full text-sm`}
+          className={`${type === "encrypted" ? "bg-success bg-opacity-20 text-success hover:bg-success hover:bg-opacity-30" : "bg-blue-500 bg-opacity-20 text-blue-400 hover:bg-blue-500 hover:bg-opacity-30"} px-2 py-0.5 rounded-full text-xs`}
         >
           {type === "encrypted" ? t("output.encrypted") : t("output.decrypted")}
         </Badge>
       </div>
       
-      <div className="w-full neu-input p-4 font-mono bg-secondary mb-4 overflow-auto max-h-48 whitespace-pre-wrap break-words">
+      <div className="w-full neu-input p-3 font-mono text-xs bg-secondary mb-3 overflow-auto max-h-40 whitespace-pre-wrap break-words">
         {content}
       </div>
       
-      <div className="flex justify-end space-x-3 rtl:space-x-reverse">
+      <div className="flex justify-end space-x-2 rtl:space-x-reverse">
         <Button
           variant="secondary"
           onClick={handleCopy}
-          className="bg-highlight hover:bg-accent custom-transition rounded-lg py-2 px-4 neu-card"
+          className="bg-highlight hover:bg-accent custom-transition rounded-lg py-1.5 px-3 text-xs neu-card"
         >
-          <Copy className="mx-2 h-4 w-4 rtl:mirror-for-rtl" /> {t("output.copy")}
+          <Copy className="mr-1.5 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-1.5" /> {t("output.copy")}
         </Button>
         <Button
           variant="secondary"
           onClick={handleDownload}
-          className="bg-highlight hover:bg-accent custom-transition rounded-lg py-2 px-4 neu-card"
+          className="bg-highlight hover:bg-accent custom-transition rounded-lg py-1.5 px-3 text-xs neu-card"
         >
-          <Download className="mx-2 h-4 w-4 rtl:mirror-for-rtl" /> {t("output.download")}
+          <Download className="mr-1.5 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-1.5" /> {t("output.download")}
         </Button>
       </div>
     </div>

@@ -61,13 +61,13 @@ function App() {
       <div className="min-h-screen bg-primary font-sans flex flex-col">
         <Header />
         
-        <main className="container mx-auto py-8 px-4 md:px-12 flex-grow flex flex-col gap-8">
+        <main className="container mx-auto py-6 px-3 md:px-8 flex-grow flex flex-col gap-5">
           {/* Main container with tabs */}
-          <div className="w-full bg-secondary rounded-lg p-6 neu-card">
+          <div className="w-full bg-secondary rounded-lg p-4 neu-card">
             <Tabs defaultValue="encrypt" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6 reverse-for-rtl">
-                <TabsTrigger value="encrypt" className="rounded-md py-2 font-medium text-sm">{t("header.encrypt")}</TabsTrigger>
-                <TabsTrigger value="decrypt" className="rounded-md py-2 font-medium text-sm">{t("header.decrypt")}</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 mb-4 reverse-for-rtl">
+                <TabsTrigger value="encrypt" className="rounded-md py-1.5 text-xs font-medium">{t("header.encrypt")}</TabsTrigger>
+                <TabsTrigger value="decrypt" className="rounded-md py-1.5 text-xs font-medium">{t("header.decrypt")}</TabsTrigger>
               </TabsList>
               <TabsContent value="encrypt" className="mt-0">
                 <EncryptionPanel 

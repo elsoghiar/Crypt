@@ -11,17 +11,18 @@ const Notification = ({ message, type, visible }: NotificationProps) => {
   return (
     <div 
       className={cn(
-        "fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-lg flex items-center z-50 transition-all transform",
+        "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 px-5 py-4 rounded-lg shadow-xl z-50 transition-all transform",
+        "max-w-sm w-full flex items-center",
         type === "success" ? "bg-success text-white" : "bg-destructive text-white",
-        visible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
+        visible ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >
       {type === "success" ? (
-        <CheckCircle className="mr-2 h-5 w-5" />
+        <CheckCircle className="shrink-0 mr-3 h-6 w-6" />
       ) : (
-        <AlertCircle className="mr-2 h-5 w-5" />
+        <AlertCircle className="shrink-0 mr-3 h-6 w-6" />
       )}
-      <span>{message}</span>
+      <span className="text-sm break-words">{message}</span>
     </div>
   );
 };
