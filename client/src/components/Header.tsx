@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import LanguageSelector from "./LanguageSelector";
+import SecuritySettings from "./SecuritySettings";
 import { useTranslation } from "react-i18next";
-import { Shield, Lock } from "lucide-react";
+import { Shield, Lock, Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const { t } = useTranslation();
   const [loaded, setLoaded] = useState(false);
+  const [securitySettingsOpen, setSecuritySettingsOpen] = useState(false);
 
   useEffect(() => {
     // Add loading animation effect on first render
@@ -14,6 +17,14 @@ const Header = () => {
     }, 500);
     return () => clearTimeout(timer);
   }, []);
+  
+  const openSecuritySettings = () => {
+    setSecuritySettingsOpen(true);
+  };
+  
+  const closeSecuritySettings = () => {
+    setSecuritySettingsOpen(false);
+  };
 
   return (
     <header className="py-4 px-4 md:px-8 flex justify-between items-center border-b border-accent overflow-hidden">
@@ -45,8 +56,23 @@ const Header = () => {
           loaded ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
         }`}
       >
+        <Button
+          onClick={openSecuritySettings}
+          variant="ghost"
+          size="icon"
+          className="mr-2 text-gray-400 hover:text-white"
+          title={t("security.settings")}
+        >
+          <Settings size={18} />
+        </Button>
         <LanguageSelector />
       </div>
+      
+      {/* Security Settings Modal */}
+      <SecuritySettings 
+        isOpen={securitySettingsOpen}
+        onClose={closeSecuritySettings}
+      />
     </header>
   );
 };

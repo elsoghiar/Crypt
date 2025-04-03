@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Copy, Download } from "lucide-react";
-import { copyToClipboard, downloadTextAsFile } from "@/lib/utils";
+import { copyToClipboard, downloadTextAsFile, clearClipboard } from "@/lib/utils";
+import { useAppContext } from "@/contexts/AppContext";
 
 interface OutputPanelProps {
   content: string;
@@ -12,11 +13,30 @@ interface OutputPanelProps {
 
 const OutputPanel = ({ content, type, showNotification }: OutputPanelProps) => {
   const { t } = useTranslation();
+  const { clipboardAutoClear, clipboardClearDelay } = useAppContext();
 
   const handleCopy = async () => {
     const copied = await copyToClipboard(content);
     if (copied) {
-      showNotification(t("common.copied"), "success");
+      // Show different notification based on whether auto-clear is enabled
+      if (clipboardAutoClear) {
+        const secondsToShow = Math.round(clipboardClearDelay / 1000);
+        showNotification(
+          t("security.clearNotification", { seconds: secondsToShow }),
+          "success"
+        );
+        
+        // Schedule clipboard clearing with notification callback
+        const clearResult = await clearClipboard(
+          clipboardClearDelay,
+          () => showNotification(t("security.clearComplete"), "success")
+        );
+        if (clearResult) {
+          console.log(`Clipboard cleared after ${secondsToShow} seconds`);
+        }
+      } else {
+        showNotification(t("common.copied"), "success");
+      }
     } else {
       showNotification(t("common.copyFailed"), "danger");
     }

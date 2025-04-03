@@ -63,11 +63,21 @@
     "copied": "Copied to clipboard!",
     "copyFailed": "Failed to copy to clipboard",
     "downloaded": "Downloaded successfully",
-    "close": "Close"
+    "close": "Close",
+    "save": "Save"
   },
   "security": {
     "title": "Security Note",
-    "message": "All encryption happens in your browser. Your data never leaves your device."
+    "message": "All encryption happens in your browser. Your data never leaves your device.",
+    "settings": "Security Settings",
+    "settingsTitle": "Security Settings",
+    "clipboardAutoClear": "Auto-clear clipboard",
+    "clipboardAutoClearDesc": "Automatically clears sensitive content from clipboard after a delay",
+    "clearDelay": "Clear delay",
+    "seconds": "seconds",
+    "clearDelayDesc": "Time to wait before automatically clearing the clipboard",
+    "clearNotification": "Clipboard will be cleared for security in {seconds} seconds",
+    "clearComplete": "Clipboard cleared for security"
   },
   "footer": {
     "disclaimer": "Crypt — Secure client-side encryption. Your data never leaves your device.",

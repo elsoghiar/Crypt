@@ -82,3 +82,29 @@ export async function copyToClipboard(text: string): Promise<boolean> {
     return false;
   }
 }
+
+// Utility for clearing clipboard after specified delay
+export async function clearClipboard(
+  delayMs: number = 60000, 
+  onClear?: () => void
+): Promise<boolean> {
+  return new Promise((resolve) => {
+    setTimeout(async () => {
+      try {
+        // Write empty string to clipboard to clear it
+        await navigator.clipboard.writeText('');
+        console.log('Clipboard cleared for security');
+        
+        // Call the callback function if provided
+        if (onClear) {
+          onClear();
+        }
+        
+        resolve(true);
+      } catch (err) {
+        console.error('Failed to clear clipboard:', err);
+        resolve(false);
+      }
+    }, delayMs);
+  });
+}
