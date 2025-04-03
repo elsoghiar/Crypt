@@ -84,8 +84,8 @@ const DecryptionPanel = ({ onDecrypt, showNotification }: DecryptionPanelProps) 
   };
 
   return (
-    <div className="w-full lg:w-1/2">
-      <div className="neu-card p-6 h-full">
+    <div className="w-full">
+      <div className="h-full">
         <h2 className="text-xl md:text-2xl font-semibold mb-6">{t("decrypt.title")}</h2>
         
         {/* Input method tabs */}

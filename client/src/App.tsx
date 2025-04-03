@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Notification from "./components/Notification";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 type OutputType = "encrypted" | "decrypted" | null;
 
@@ -54,17 +55,27 @@ function App() {
       <div className="min-h-screen bg-primary font-sans flex flex-col">
         <Header />
         
-        <main className="container mx-auto py-8 px-4 md:px-12 flex-grow">
-          {/* Two-column layout */}
-          <div className="flex flex-col lg:flex-row gap-8">
-            <EncryptionPanel 
-              onEncrypt={handleEncryptionOutput} 
-              showNotification={showNotification}
-            />
-            <DecryptionPanel 
-              onDecrypt={handleDecryptionOutput}
-              showNotification={showNotification}
-            />
+        <main className="container mx-auto py-8 px-4 md:px-12 flex-grow flex flex-col gap-8">
+          {/* Main container with tabs */}
+          <div className="w-full bg-secondary rounded-lg p-6 neu-card">
+            <Tabs defaultValue="encrypt" className="w-full">
+              <TabsList className="grid w-full grid-cols-2 mb-6">
+                <TabsTrigger value="encrypt">{t("header.encrypt")}</TabsTrigger>
+                <TabsTrigger value="decrypt">{t("header.decrypt")}</TabsTrigger>
+              </TabsList>
+              <TabsContent value="encrypt" className="mt-0">
+                <EncryptionPanel 
+                  onEncrypt={handleEncryptionOutput} 
+                  showNotification={showNotification}
+                />
+              </TabsContent>
+              <TabsContent value="decrypt" className="mt-0">
+                <DecryptionPanel 
+                  onDecrypt={handleDecryptionOutput}
+                  showNotification={showNotification}
+                />
+              </TabsContent>
+            </Tabs>
           </div>
           
           {/* Output section (shows up after encryption/decryption) */}
