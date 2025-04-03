@@ -88,8 +88,15 @@ const DecryptionPanel = ({ onDecrypt, showNotification }: DecryptionPanelProps) 
         
         {/* Text input section */}
         <div className="mb-4">
-          <div className="flex justify-between items-center mb-1">
-            <Label className="block text-xs font-medium">{t("decrypt.inputLabel")}</Label>
+          <Label className="block text-xs font-medium mb-1">{t("decrypt.inputLabel")}</Label>
+          <Textarea 
+            value={encryptedText}
+            onChange={handleEncryptedTextChange}
+            className="w-full h-32 neu-input p-3 resize-none text-xs font-mono"
+            placeholder={t("decrypt.inputPlaceholder")}
+          />
+          <div className="mt-2 flex items-center">
+            <Label className="text-xs font-medium mr-2">{t("decrypt.fileLabel")}</Label>
             <Input 
               type="file"
               accept=".txt,.json"
@@ -98,12 +105,6 @@ const DecryptionPanel = ({ onDecrypt, showNotification }: DecryptionPanelProps) 
               size={10}
             />
           </div>
-          <Textarea 
-            value={encryptedText}
-            onChange={handleEncryptedTextChange}
-            className="w-full h-32 neu-input p-3 resize-none text-xs font-mono"
-            placeholder={t("decrypt.inputPlaceholder")}
-          />
         </div>
         
         {/* Password input for decryption */}
@@ -136,7 +137,7 @@ const DecryptionPanel = ({ onDecrypt, showNotification }: DecryptionPanelProps) 
           >
             <UnlockKeyhole className="mr-2 h-3 w-3 rtl:order-1 rtl:mr-0 rtl:ml-2" /> {t("decrypt.button")}
           </Button>
-          <div className="flex space-x-2 rtl:space-x-reverse">
+          <div className="flex space-x-3 rtl:space-x-reverse action-buttons">
             <Button 
               variant="ghost"
               onClick={handleCopy}

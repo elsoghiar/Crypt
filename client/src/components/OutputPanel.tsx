@@ -44,20 +44,20 @@ const OutputPanel = ({ content, type, showNotification }: OutputPanelProps) => {
         {content}
       </div>
       
-      <div className="flex justify-end space-x-2 rtl:space-x-reverse">
+      <div className="flex justify-end space-x-3 rtl:space-x-reverse action-buttons">
         <Button
           variant="secondary"
           onClick={handleCopy}
           className="bg-highlight hover:bg-accent custom-transition rounded-lg py-1.5 px-3 text-xs neu-card"
         >
-          <Copy className="mr-1.5 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-1.5" /> {t("output.copy")}
+          <Copy className="mr-2 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-2" /> {t("output.copy")}
         </Button>
         <Button
           variant="secondary"
           onClick={handleDownload}
           className="bg-highlight hover:bg-accent custom-transition rounded-lg py-1.5 px-3 text-xs neu-card"
         >
-          <Download className="mr-1.5 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-1.5" /> {t("output.download")}
+          <Download className="mr-2 h-3 w-3 rtl:mirror-for-rtl rtl:mr-0 rtl:ml-2" /> {t("output.download")}
         </Button>
       </div>
     </div>

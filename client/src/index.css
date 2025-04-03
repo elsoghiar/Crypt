@@ -163,4 +163,20 @@
   html[dir="rtl"] .select-dropdown {
     direction: rtl;
   }
+
+  /* RTL specific spacing adjustments for buttons and notifications */
+  html[dir="rtl"] .rtl-icon-space {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+
+  html[dir="rtl"] .notification-icon {
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+  /* Improved spacing for buttons in RTL */
+  html[dir="rtl"] .action-buttons {
+    gap: 1rem;
+  }
 }

@@ -140,7 +140,7 @@ const EncryptionPanel = ({ onEncrypt, showNotification }: EncryptionPanelProps) 
           >
             <Lock className="mr-2 h-3 w-3 rtl:order-1 rtl:mr-0 rtl:ml-2" /> {t("encrypt.button")}
           </Button>
-          <div className="flex space-x-2 rtl:space-x-reverse">
+          <div className="flex space-x-3 rtl:space-x-reverse action-buttons">
             <Button 
               variant="ghost"
               onClick={handleClearInput}

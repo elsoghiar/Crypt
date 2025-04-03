@@ -1,5 +1,6 @@
 import { AlertCircle, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 interface NotificationProps {
   message: string;
@@ -8,6 +9,9 @@ interface NotificationProps {
 }
 
 const Notification = ({ message, type, visible }: NotificationProps) => {
+  const { i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   return (
     <div 
       className={cn(
@@ -23,9 +27,15 @@ const Notification = ({ message, type, visible }: NotificationProps) => {
     >
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-black/20 to-black/5 pointer-events-none" />
       {type === "success" ? (
-        <CheckCircle className="shrink-0 mr-3 h-6 w-6 z-10" />
+        <CheckCircle className={cn(
+          "shrink-0 h-6 w-6 z-10 notification-icon",
+          isRTL ? "ml-4" : "mr-4"
+        )} />
       ) : (
-        <AlertCircle className="shrink-0 mr-3 h-6 w-6 z-10" />
+        <AlertCircle className={cn(
+          "shrink-0 h-6 w-6 z-10 notification-icon",
+          isRTL ? "ml-4" : "mr-4"
+        )} />
       )}
       <span className="text-sm break-words z-10">{message}</span>
     </div>
