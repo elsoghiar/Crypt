@@ -62,7 +62,8 @@
   "common": {
     "copied": "Copied to clipboard!",
     "copyFailed": "Failed to copy to clipboard",
-    "downloaded": "Downloaded successfully"
+    "downloaded": "Downloaded successfully",
+    "close": "Close"
   },
   "security": {
     "title": "Security Note",
